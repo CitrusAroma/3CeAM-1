@@ -35,10 +35,6 @@ matrix:
     env: CONFIGURE_FLAGS="--enable-64bit --enable-debug=yes"
   - compiler: gcc
     env: CONFIGURE_FLAGS="--enable-64bit"
-  - compiler: gcc
-    env: CONFIGURE_FLAGS="--enable-64bit --enable-debug=yes --CC=gcc-5 --disable-manager"
-  - compiler: gcc
-    env: CONFIGURE_FLAGS="--enable-64bit --CC=gcc-5 --disable-manager"
   
 notifications:
   email: false
