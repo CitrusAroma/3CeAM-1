@@ -3701,7 +3701,7 @@ static bool mob_readdb_sub(char* fields[], int columns, int current)
 
 static void mob_readdb(void)
 {
-	const char* filename[] = { "mob_db.txt", "mob_db2.txt", "mob_db_3ceam.txt" };
+	const char* filename[] = { "mob_db.txt", "mob_db_3ceam.txt", "mob_db_custom.txt" };
 	int fi;
 	
 	for( fi = 0; fi < ARRAYLENGTH(filename); ++fi )
@@ -3727,7 +3727,7 @@ static void mob_readdb(void)
  *------------------------------------------*/
 static int mob_read_sqldb(void)
 {
-	const char* mob_db_name[] = { mob_db_db, mob_db2_db };
+	const char* mob_db_name[] = { mob_db_db, mob_db_3ceam_db, mob_db_custom_db };
 	int fi;
 	
 	for( fi = 0; fi < ARRAYLENGTH(mob_db_name); ++fi )
@@ -4263,7 +4263,7 @@ static bool mob_parse_row_mobskilldb(char** str, int columns, int current)
  *------------------------------------------*/
 static void mob_readskilldb(void)
 {
-	const char* filename[] = { "mob_skill_db.txt", "mob_skill_db2.txt", "mob_skill_db_3ceam.txt" };
+	const char* filename[] = { "mob_skill_db.txt", "mob_skill_db_3ceam.txt", "mob_skill_db_custom.txt" };
 	int fi;
 
 	if( battle_config.mob_skill_rate == 0 )
